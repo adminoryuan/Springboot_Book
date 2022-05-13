@@ -1,5 +1,7 @@
 package com.example.day1.Config;
 
+import com.example.factorystart.server.Taskfactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 
@@ -9,8 +11,7 @@ import org.springframework.context.annotation.Bean;
 @Configurable
 public class defulatConfig {
 
-    @Bean
-    public TaskFactory getTaskFactory(){
-        return new TaskFactory();
-    }
+
+
+
 }
