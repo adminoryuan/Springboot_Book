@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
     @Autowired
     Taskfactory taskfactory;
-    {
-        System.out.printf("");
-    }
+
     /**
      * 选择SendEmailCode注入
      */

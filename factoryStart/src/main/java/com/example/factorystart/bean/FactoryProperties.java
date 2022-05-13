@@ -10,9 +10,8 @@ import org.springframework.stereotype.Component;
 @Data
 public class FactoryProperties {
 
-  private   int MaxCore;
+   private   int ThreadCore;
    private int MaxThread;
-
-
+   private int keepAliveTime;
 
 }
