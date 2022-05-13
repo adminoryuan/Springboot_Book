@@ -30,8 +30,8 @@ public class JsonUntity {
      * @return
      * @throws IOException
      */
-    public <T> T Squence(String token,T Data) throws IOException {
-        T o = (T) wrap.readValue(token, Data.getClass());
+    public <T> T Squence(String token,Class Data) throws IOException {
+        T o = (T) wrap.readValue(token, Data);
         return o;
     }
 }

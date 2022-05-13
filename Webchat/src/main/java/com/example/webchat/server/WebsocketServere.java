@@ -1,5 +1,6 @@
 package com.example.webchat.server;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketMessage;
@@ -13,6 +14,8 @@ public class WebsocketServere implements WebSocketHandler {
 
     private Map<String,WebSocketSession> OnLineMap=new ConcurrentHashMap<>();
 
+    @Autowired
+    IHandleMessage server;
 
     /**
      * 返回当前在线人数
@@ -22,8 +25,6 @@ public class WebsocketServere implements WebSocketHandler {
         return OnLineMap.size();
 
     }
-
-
 
     /**
      * 连接时触发
@@ -44,7 +45,7 @@ public class WebsocketServere implements WebSocketHandler {
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         String Body= message.getPayload().toString();
-
+        server.Handle(Body);
 
     }
 

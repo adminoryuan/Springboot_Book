@@ -8,7 +8,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class CliMessageEntity<T>{
+public class CliMessageEntity{
 
     /**
      * 消息类型
@@ -21,7 +21,7 @@ public class CliMessageEntity<T>{
     String Token;
 
 
-    T PlayLoad;
+    String PlayLoad;
 
 
 }
