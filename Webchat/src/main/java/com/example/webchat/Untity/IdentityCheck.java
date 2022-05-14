@@ -10,6 +10,11 @@ import org.springframework.stereotype.Component;
 public class IdentityCheck {
 
 
+    /**
+     * 验证token 是否过期
+     * @param token
+     * @return
+     */
     public String Check(String token){
         return JwtUntity.DecodingJwt(token);
     }

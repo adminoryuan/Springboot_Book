@@ -45,7 +45,8 @@ public class WebsocketServere implements WebSocketHandler {
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         String Body= message.getPayload().toString();
-        server.Handle(Body);
+
+        server.Handle(Body,session);
 
     }
 
