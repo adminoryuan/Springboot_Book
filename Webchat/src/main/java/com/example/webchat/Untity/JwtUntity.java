@@ -24,7 +24,7 @@ public class JwtUntity {
         JwtBuilder Jwtbuilder = Jwts.builder();
         Map<String,Object> hashMap=new HashMap<>();
         hashMap.put("admin",admin);
-        return Jwtbuilder.setSubject("WebsocketWebchat.")
+        return Jwtbuilder.setSubject("Websocketerver.")
                 .setIssuedAt(new Date())
                 .setId("1")
                 .setClaims(hashMap)
