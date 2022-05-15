@@ -6,7 +6,7 @@ package com.example.webchat.server.Websocket;
 public interface IHandleFunc {
 
 
-    String Login(String playLoad);
+
 
 
     void DispMessage(String playLoad);

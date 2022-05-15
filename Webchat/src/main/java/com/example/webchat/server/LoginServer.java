@@ -29,8 +29,9 @@ public class LoginServer {
 
         UserEntity userEntity = mapper.selectOne(Wrapp);
 
+
         if (userEntity!=null){
-            return userEntity.getAdmin();
+            return JwtUntity.DecodingJwt(admin);
         }
         return null;
     }

@@ -20,32 +20,6 @@ public class HandleFuncImpl implements IHandleFunc {
 
     @Autowired
     LoginServer Server;
-    @Override
-    public String Login(String playLoad) {
-
-        try {
-            UserEntity squence = Juntity.<UserEntity>Squence(playLoad, UserEntity.class);
-            String token=Server.Login(squence.getAdmin(),squence.getPassword());
-
-            ResultMessageEntity<String> resultMessageEntity=new ResultMessageEntity<>();
-            if (token!=null){
-                /***
-                 * 返回登录成功响应消息
-                 */
-                resultMessageEntity.setMegType(1);
-                resultMessageEntity.setIsOk(true);
-                resultMessageEntity.setBody(token);
-            }else{
-                resultMessageEntity.setIsOk(false);
-            }
-            return Juntity.Serialize(resultMessageEntity);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "服务器错误";
-
-    }
 
     @Override
     public void DispMessage(String playLoad) {

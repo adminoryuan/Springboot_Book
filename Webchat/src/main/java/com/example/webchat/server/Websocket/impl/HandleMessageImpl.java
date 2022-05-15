@@ -52,12 +52,7 @@ public class HandleMessageImpl implements IHandleMessage {
             //根据消息类型对消息进行处理
 
             switch (squence.getMegType()){
-                case 1:
-                    String login = Ifunc.Login(squence.getPlayLoad());
 
-                    session.sendMessage(new TextMessage(login));
-
-                    break;
 
             }
         } catch (IOException e) {

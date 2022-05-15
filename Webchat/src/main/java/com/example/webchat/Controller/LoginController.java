@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+/**
+ * 登录
+ */
 public class LoginController {
 
     @Autowired
@@ -38,5 +41,7 @@ public class LoginController {
         responseEntity.setBodys(maps);
         return responseEntity;
     }
+
+
 
 }

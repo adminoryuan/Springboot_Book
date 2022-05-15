@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/Api/Contact")
+/**
+ * 用户列表
+ */
 public class ContactsController {
 
 
