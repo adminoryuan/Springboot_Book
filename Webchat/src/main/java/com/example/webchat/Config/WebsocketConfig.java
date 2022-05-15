@@ -1,7 +1,6 @@
 package com.example.webchat.Config;
 
-import com.example.webchat.server.WebsocketServere;
-import org.springframework.boot.autoconfigure.batch.BatchDataSource;
+import com.example.webchat.server.Websocket.WebsocketServere;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;

@@ -1,17 +1,15 @@
-package com.example.webchat.server.impl;
+package com.example.webchat.server.Websocket.impl;
 
 import com.example.webchat.Entity.CliMessageEntity;
-import com.example.webchat.Entity.UserEntity;
 import com.example.webchat.Untity.JsonUntity;
-import com.example.webchat.server.IHandleFunc;
-import com.example.webchat.server.IHandleMessage;
+import com.example.webchat.server.Websocket.IHandleFunc;
+import com.example.webchat.server.Websocket.IHandleMessage;
 import com.example.webchat.server.LoginServer;
-import com.example.webchat.server.ResultServer;
+import com.example.webchat.server.Websocket.ResultServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
-import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.webchat.server;
+package com.example.webchat.server.Websocket;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.socket.CloseStatus;

@@ -1,4 +1,4 @@
-package com.example.webchat.server;
+package com.example.webchat.server.Websocket;
 
 import com.example.webchat.Entity.ResultMessageEntity;
 import com.example.webchat.Untity.JsonUntity;
