@@ -10,7 +10,6 @@ import java.io.IOException;
 public class JsonUntity {
 
     private ObjectMapper wrap=new ObjectMapper();
-
     /**
      * 序列化
      * @param data
@@ -19,7 +18,8 @@ public class JsonUntity {
      * @throws JsonProcessingException
      */
     public <T>String Serialize(T data) throws JsonProcessingException {
-        return wrap.writeValueAsString(data);
+       return wrap.writeValueAsString(data);
+
     }
 
     /**
@@ -31,7 +31,8 @@ public class JsonUntity {
      * @throws IOException
      */
     public <T> T Squence(String token,Class Data) throws IOException {
-        T o = (T) wrap.readValue(token, Data);
+       T o = (T) wrap.readValue(token, Data);
+
         return o;
     }
 }

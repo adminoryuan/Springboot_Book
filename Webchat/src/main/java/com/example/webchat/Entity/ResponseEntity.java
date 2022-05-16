@@ -9,9 +9,11 @@ import java.util.Map;
  */
 @Data
 public class ResponseEntity<T> {
+
     int statue;
 
     boolean isSuccess;
+
     public T Bodys;
 
 

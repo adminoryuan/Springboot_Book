@@ -25,7 +25,8 @@ public class LoginServer {
 
 
     public String Login(String admin,String password){
-        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("admin",admin).lt("password",password);
+        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("UserName",admin).lt("password",password);
+
 
         UserEntity userEntity = mapper.selectOne(Wrapp);
 
@@ -40,4 +41,17 @@ public class LoginServer {
         return check.Check(token);
     }
 
+
+    /**
+     * 注册用户
+     * @return
+     */
+    public boolean Regist(String email,String password){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setEmail(email);
+        userEntity.setPassword(password);
+        //userEntity.setUserName(admin);
+        return mapper.insert(userEntity)>0;
+
+    }
 }

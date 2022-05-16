@@ -16,7 +16,6 @@ import java.util.Map;
  * 登录
  */
 public class LoginController {
-
     @Autowired
     LoginServer server;
 
@@ -43,7 +42,20 @@ public class LoginController {
     }
 
 
+    @PostMapping("/Regist")
+    public ResponseEntity Regist(@RequestParam String email,@RequestParam String password){
 
+        ResponseEntity<String> responseEntity=new ResponseEntity<>();
+        responseEntity.setStatue(200);
+        if (server.Regist(email,password)){
+            responseEntity.setSuccess(true);
+            responseEntity.setBodys("注册成功了");
 
+         }else {
+            responseEntity.setSuccess(false);
+            responseEntity.setBodys("注册失败 账号已经存在了");
+        }
+        return  responseEntity;
 
+    }
 }

@@ -12,6 +12,9 @@ import java.util.logging.Logger;
 
 public class Taskfactory {
 
+    @Autowired
+    FactoryProperties properties;
+
     class MyFactory implements ThreadFactory {
 
         @Override
@@ -21,22 +24,24 @@ public class Taskfactory {
     }
 
     private ThreadPoolExecutor executor;
+
     public Taskfactory(){
         System.out.printf("创建了对象\n");
-        executor=new ThreadPoolExecutor(
-               properties.getThreadCore(),
-                properties.getMaxThread(),
-                20,
-                TimeUnit.MILLISECONDS,
-                new ArrayBlockingQueue<>(properties.getMaxThread()),
-                new MyFactory()
-        );
+
     }
 
-    @Autowired
-    FactoryProperties properties;
 
     public void Sumbit(Runnable runnable){
+        if (executor==null){
+            executor=new ThreadPoolExecutor(
+                    properties.getThreadCore(),
+                    properties.getMaxThread(),
+                    20,
+                    TimeUnit.MILLISECONDS,
+                    new ArrayBlockingQueue<>(properties.getMaxThread()),
+                    new MyFactory()
+            );
+        }
         executor.execute(runnable);
         System.out.printf("你提交了一个任务");
     }

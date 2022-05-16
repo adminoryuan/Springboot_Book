@@ -9,8 +9,8 @@ import com.example.webchat.server.Websocket.ResultServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import org.springframework.web.socket.TextMessage;
-import org.springframework.web.socket.WebSocketSession;
+//import org.springframework.web.socket.TextMessage;
+//import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;
 
@@ -33,33 +33,33 @@ public class HandleMessageImpl implements IHandleMessage {
     /**
      * 中转消息
      */
-    public void Handle(String message, WebSocketSession session){
-        String currUser="";
-        try {
-            CliMessageEntity squence = untity.<CliMessageEntity>Squence(message, CliMessageEntity.class);
-            // 不是登录消息 需要查验token
-            if (squence.getMegType()!=1){
-
-                currUser=Server.CheckToken(squence.getToken());
-
-                 if(currUser==null){
-                     session.sendMessage(new TextMessage(untity.Serialize(ResultServer.ServerError(squence.getMegType()))));
-                     return;
-                 }
-
-            }
-
-            //根据消息类型对消息进行处理
-
-            switch (squence.getMegType()){
-
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
+//    public void Handle(String message, WebSocketSession session){
+//        String currUser="";
+//        try {
+//            CliMessageEntity squence = untity.<CliMessageEntity>Squence(message, CliMessageEntity.class);
+//            // 不是登录消息 需要查验token
+//            if (squence.getMegType()!=1){
+//
+//                currUser=Server.CheckToken(squence.getToken());
+//
+//                 if(currUser==null){
+//                     session.sendMessage(new TextMessage(untity.Serialize(ResultServer.ServerError(squence.getMegType()))));
+//                     return;
+//                 }
+//
+//            }
+//
+//            //根据消息类型对消息进行处理
+//
+//            switch (squence.getMegType()){
+//
+//
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
 
 }
