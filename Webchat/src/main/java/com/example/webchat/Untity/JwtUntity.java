@@ -13,14 +13,14 @@ import java.util.Map;
 @Component
 public class JwtUntity {
 
-    public static String PrivateKey="jaslkdjalksjdlaksjdlkasjdlkajsldkjas";
+    public  String PrivateKey="jaslkdjalksjdlaksjdlkasjdlkajsldkjas";
 
     /**
      * 生成jwt
      * @param admin
      * @return
      */
-    public static String EncoderJwt(String admin){
+    public  String EncoderJwt(String admin){
         JwtBuilder Jwtbuilder = Jwts.builder();
         Map<String,Object> hashMap=new HashMap<>();
         hashMap.put("admin",admin);
@@ -37,7 +37,7 @@ public class JwtUntity {
      * @param jwt
      * @return
      */
-    public static String DecodingJwt(String jwt){
+    public  String DecodingJwt(String jwt){
         JwtParser jwtParser=Jwts.parser();
 
         jwtParser.setSigningKey(PrivateKey);

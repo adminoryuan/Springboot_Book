@@ -23,16 +23,21 @@ public class LoginServer {
     @Autowired
     IdentityCheck check;
 
+    @Autowired
+    JwtUntity untity;
 
     public String Login(String admin,String password){
-        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("UserName",admin).lt("password",password);
+        System.out.printf(admin);
+        System.out.printf(password);
+
+        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("username",admin).eq("password",password);
 
 
         UserEntity userEntity = mapper.selectOne(Wrapp);
 
-
         if (userEntity!=null){
-            return JwtUntity.DecodingJwt(admin);
+
+            return untity.EncoderJwt("ll");
         }
         return null;
     }
@@ -50,7 +55,10 @@ public class LoginServer {
         UserEntity userEntity = new UserEntity();
         userEntity.setEmail(email);
         userEntity.setPassword(password);
+        userEntity.setUserName(email);
+        userEntity.setAge(10);
         //userEntity.setUserName(admin);
+
         return mapper.insert(userEntity)>0;
 
     }

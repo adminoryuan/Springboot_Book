@@ -8,7 +8,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class IdentityCheck {
-
+    @Autowired
+    JwtUntity jwtUntity;
 
     /**
      * 验证token 是否过期
@@ -16,6 +17,6 @@ public class IdentityCheck {
      * @return
      */
     public String Check(String token){
-        return JwtUntity.DecodingJwt(token);
+        return jwtUntity.DecodingJwt(token);
     }
 }

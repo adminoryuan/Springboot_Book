@@ -10,5 +10,7 @@ public class UserFriendVo {
 
     int id;
 
-    UserEntity userEntity;
+    String userName;
+
+
 }

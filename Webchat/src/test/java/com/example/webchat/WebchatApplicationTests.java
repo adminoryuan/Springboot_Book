@@ -1,5 +1,6 @@
 package com.example.webchat;
 
+import com.example.webchat.Untity.JwtUntity;
 import com.example.webchat.server.LoginServer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,5 +16,12 @@ class WebchatApplicationTests {
     void contextLoads() {
         System.out.println(server.Login("username","password"));
     }
+    @Test
+    void Add(){
+        server.Regist("username","admin");
+    }
 
+    @Test
+    void Webchat(){
+    }
 }

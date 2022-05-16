@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,6 +23,7 @@ public class LoginController {
     @PostMapping("/Login")
     public ResponseEntity Login(@RequestParam String admin,@RequestParam String password){
         String token= server.Login(admin,password);
+
         ResponseEntity<Map<String,String>> responseEntity = new ResponseEntity();
 
         Map<String,String> maps=new HashMap<>();
@@ -57,5 +59,13 @@ public class LoginController {
         }
         return  responseEntity;
 
+    }
+
+    /**
+     * 获取个人详细信息
+     * @return
+     */
+    public ResponseEntity<UserMapper> GetThenInfo(HttpServletRequest request){
+        request.gett
     }
 }
