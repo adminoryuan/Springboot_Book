@@ -30,7 +30,7 @@ public class LoginServer {
         System.out.printf(admin);
         System.out.printf(password);
 
-        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("username",admin).eq("password",password);
+        Wrapper<UserEntity> Wrapp=new QueryWrapper<UserEntity>().eq("Email",admin).eq("password",password);
 
 
         UserEntity userEntity = mapper.selectOne(Wrapp);
@@ -55,7 +55,7 @@ public class LoginServer {
         UserEntity userEntity = new UserEntity();
         userEntity.setEmail(email);
         userEntity.setPassword(password);
-        userEntity.setUserName(email);
+        userEntity.setName("会飞的企鹅");
         userEntity.setAge(10);
         //userEntity.setUserName(admin);
 

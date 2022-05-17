@@ -10,7 +10,11 @@ public class UserFriendVo {
 
     int id;
 
-    String userName;
+    String Name;
+
+    int sex;
+
+    String Email;
 
 
 }

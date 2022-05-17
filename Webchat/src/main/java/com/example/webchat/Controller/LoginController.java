@@ -1,6 +1,7 @@
 package com.example.webchat.Controller;
 
 import com.example.webchat.Entity.ResponseEntity;
+import com.example.webchat.Entity.UserEntity;
 import com.example.webchat.Mapper.UserMapper;
 import com.example.webchat.server.LoginServer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -17,6 +19,7 @@ import java.util.Map;
  * 登录
  */
 public class LoginController {
+
     @Autowired
     LoginServer server;
 
@@ -44,6 +47,7 @@ public class LoginController {
     }
 
 
+
     @PostMapping("/Regist")
     public ResponseEntity Regist(@RequestParam String email,@RequestParam String password){
 
@@ -61,11 +65,5 @@ public class LoginController {
 
     }
 
-    /**
-     * 获取个人详细信息
-     * @return
-     */
-    public ResponseEntity<UserMapper> GetThenInfo(HttpServletRequest request){
-        request.gett
-    }
+
 }

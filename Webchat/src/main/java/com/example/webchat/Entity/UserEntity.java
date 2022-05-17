@@ -11,8 +11,8 @@ public class UserEntity {
     int Id;
     Integer Age;
 
-    @TableField(value = "username")
-    String userName;
+
+    String Name;
 
     String password;
 
