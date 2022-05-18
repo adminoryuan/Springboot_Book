@@ -13,8 +13,6 @@ import org.springframework.stereotype.Component;
 public class ResultServer {
 
 
-
-
     public static ResultMessageEntity<String> ServerError(int typeId){
 
         ResultMessageEntity<String> resultMessageEntity=new ResultMessageEntity<>();

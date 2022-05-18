@@ -37,7 +37,7 @@ public class LoginServer {
 
         if (userEntity!=null){
 
-            return untity.EncoderJwt("ll");
+            return untity.EncoderJwt(admin);
         }
         return null;
     }

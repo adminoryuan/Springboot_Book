@@ -5,9 +5,5 @@ package com.example.webchat.server.Websocket;
  */
 public interface IHandleFunc {
 
-
-
-
-
     void DispMessage(String playLoad);
 }

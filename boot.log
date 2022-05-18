@@ -1,0 +1,67 @@
+2022-05-18 15:10:02.670  INFO 10840 --- [main] com.example.webchat.WebchatApplication   : Starting WebchatApplication using Java 16.0.2 on iMac with PID 10840 (/Users/imac/ImChat/Boot/Webchat/target/classes started by imac in /Users/imac/ImChat/Boot)
+2022-05-18 15:10:02.699  INFO 10840 --- [main] com.example.webchat.WebchatApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-05-18 15:10:03.966  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-18 15:10:03.968  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-18 15:10:03.992  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-05-18 15:10:05.173  INFO 10840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-05-18 15:10:05.191  INFO 10840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-18 15:10:05.192  INFO 10840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-18 15:10:05.289  INFO 10840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-18 15:10:05.290  INFO 10840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2524 ms
+2022-05-18 15:10:06.398  INFO 10840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-05-18 15:10:06.408  INFO 10840 --- [main] com.example.webchat.WebchatApplication   : Started WebchatApplication in 4.406 seconds (JVM running for 5.668)
+2022-05-18 15:10:18.813  INFO 10840 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-18 15:10:18.878  INFO 10840 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-18 15:10:18.880  INFO 10840 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-18 15:15:43.085  INFO 10840 --- [http-nio-9000-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-18 15:15:43.816  INFO 10840 --- [http-nio-9000-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-18 15:50:32.005  INFO 10840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-18 15:50:32.086  INFO 10840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-18 15:50:44.154  INFO 11267 --- [main] com.example.webchat.WebchatApplication   : Starting WebchatApplication using Java 16.0.2 on iMac with PID 11267 (/Users/imac/ImChat/Boot/Webchat/target/classes started by imac in /Users/imac/ImChat/Boot)
+2022-05-18 15:50:44.185  INFO 11267 --- [main] com.example.webchat.WebchatApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-05-18 15:50:47.161  INFO 11267 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-18 15:50:47.165  INFO 11267 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-18 15:50:47.187  INFO 11267 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-05-18 15:50:48.191  INFO 11267 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-05-18 15:50:48.202  INFO 11267 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-18 15:50:48.203  INFO 11267 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-18 15:50:48.335  INFO 11267 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-18 15:50:48.335  INFO 11267 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3670 ms
+2022-05-18 15:50:49.868  INFO 11267 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-05-18 15:50:49.878  INFO 11267 --- [main] com.example.webchat.WebchatApplication   : Started WebchatApplication in 6.618 seconds (JVM running for 8.739)
+2022-05-18 15:53:11.155  INFO 11267 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-18 15:53:11.195  INFO 11267 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-18 15:53:11.197  INFO 11267 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-18 15:53:11.741  INFO 11267 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-18 15:53:12.442  INFO 11267 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-18 15:57:54.253 ERROR 11267 --- [http-nio-9000-exec-5] w.s.h.ExceptionWebSocketHandlerDecorator : Closing session due to exception for StandardWebSocketSession[id=b4b44d2d-c406-d28f-c38c-be2b672ae9fc, uri=ws://127.0.0.1:9000/imServer]
+
+java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+	at com.example.webchat.server.Websocket.HandleMessageImpl.Handle(HandleMessageImpl.java:77) ~[classes/:na]
+	at com.example.webchat.server.Websocket.WebsocketServere.handleMessage(WebsocketServere.java:48) ~[classes/:na]
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:114) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:43) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:85) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:82) ~[spring-websocket-5.3.19.jar:5.3.19]
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:415) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:129) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:515) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:301) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
