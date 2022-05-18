@@ -72,15 +72,19 @@ public class HandleMessageImpl implements IHandleMessage {
                         /**
                          * 发送消息
                          */
-                        Map<String,String> Bodys=new HashMap<>();
-                        Map<String,String> meg=untity.Squence(squence.getPlayLoad(),Bodys.getClass());
+                        Map<String,String> meg=squence.getPlayLoad();
+                        System.out.println(meg.keySet().size());
                         if (meg.getOrDefault("isMass","").equals("1")){
                             String bodys=meg.getOrDefault("meg","");
-                            ResultMessageEntity<String> res=new ResultMessageEntity<>();
-                            res.setIsOk(true);
-                            res.setBody(bodys);
-                            res.setMegType(3);
+                            Map<String,String> maps=new HashMap<>();
 
+                            maps.put("sendUser",currUser);
+                            maps.put("bodys",bodys);
+
+                            ResultMessageEntity<Map<String,String>> res=new ResultMessageEntity<>();
+                            res.setIsOk(true);
+                            res.setBody(maps);
+                            res.setMegType(3);
                             OnLineServer.Mass(untity.Serialize(res));
                         }
                         break;

@@ -44,7 +44,6 @@ public class WebsocketServere implements WebSocketHandler {
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         String Body= message.getPayload().toString();
 
-
         HandleImp.Handle(Body,session);
 
     }

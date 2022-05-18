@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <div>
+
+        <ul id="ProsonList">
+
+        </ul>
+        <label >聊天记录:</label>
+        <div  id="secode" style="width:100%;height:300px">
+
+        </div>
+
+        <label >当前聊天对象:群发</label>
+        <br>
+        <textarea style="width: 80%;height:50px" id="bodys">
+
+        </textarea>
+
+        <button onclick="sendMessage()">发送消息</button>
+
+    </div>
+
+</head>
+<body>
+
+<script>
+    var Conn=new WebSocket('ws://192.168.0.135:9000/imServer')
+    var token="eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbiI6IjUyOTkzMTg2OUBxcS5jb20iLCJleHAiOjE2NTI4ODA2Mzl9.E-6sLVi4FlWIoNEnV1HLomUDpAWB3mALwaiXrCdmB7Y"
+    function sendMessage(){
+
+        var bodys={
+            "isMass":1,
+            "megType":"0",
+            "meg":document.getElementById("bodys").value
+        }
+
+        var data={
+            "megType":3,
+            "token":token,
+            "playLoad":bodys
+        }
+        console.log(JSON.stringify(data))
+
+        Conn.send(JSON.stringify(data))
+
+    }
+
+    Conn.onopen=function(event){
+        var data={
+            "megType":1,
+            "token":token,
+            "playLoad":{}
+        }
+        Conn.send(JSON.stringify(data))
+
+        var data={
+            "megType":2,
+            "token":token,
+            "playLoad":{}
+        }
+        Conn.send(JSON.stringify(data))
+    }
+    Conn.onclose=function(event){
+        console.log("链接失效")
+    }
+
+    Conn.onerror=function(event){
+
+    }
+
+    Conn.onmessage=function(event){
+        var obj=JSON.parse(event.data)
+        console.log(obj)
+
+        switch(obj.megType){
+            case 2:
+                var bodys=obj.body
+                var ui= document.getElementById("ProsonList")
+
+                for (var i=0;i<bodys.length;i++){
+                    var el=document.createElement("li")
+                    el.innerHTML=
+                        bodys[i]+
+                        "<button >私聊</button>"
+
+                    ui.appendChild(el)
+                }
+
+                break
+            case 3:
+                var txt=document.getElementById("secode")
+
+                txt.append(obj.body.sendUser+":"+obj.body.bodys)
+
+                var br=document.createElement("br")
+                txt.appendChild(br)
+
+        }
+    }
+</script>
+</body>
+<style>
+    .button{
+        width: 100px;
+        height: 30px;
+    }
+</style>
+</html>

@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+
 /**
  * 规定一下消息的格式
  */
@@ -23,7 +25,7 @@ public class CliMessageEntity{
     String Token;
 
 
-    String PlayLoad;
+    Map<String,String> PlayLoad;
 
 
 }

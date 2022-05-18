@@ -47,6 +47,5 @@ class WebchatApplicationTests {
         CliMessageEntity a= untity.Squence(data,CliMessageEntity.class);
 
 
-        System.out.printf(a.getPlayLoad());
     }
 }
