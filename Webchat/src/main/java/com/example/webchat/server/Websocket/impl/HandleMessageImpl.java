@@ -1,4 +1,4 @@
-package com.example.webchat.server.Websocket;
+package com.example.webchat.server.Websocket.impl;
 
 import com.example.webchat.Entity.CliMessageEntity;
 import com.example.webchat.Entity.ResultMessageEntity;
@@ -73,7 +73,7 @@ public class HandleMessageImpl implements IHandleMessage {
                          * 发送消息
                          */
                         Map<String,String> meg=squence.getPlayLoad();
-                        System.out.println(meg.keySet().size());
+
                         if (meg.getOrDefault("isMass","").equals("1")){
                             String bodys=meg.getOrDefault("meg","");
                             Map<String,String> maps=new HashMap<>();

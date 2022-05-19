@@ -25,19 +25,21 @@ public class LoginController {
 
     @PostMapping("/Login")
     public ResponseEntity Login(@RequestParam String admin,@RequestParam String password){
-        String token= server.Login(admin,password);
+        String[] val= server.Login(admin,password);
 
         ResponseEntity<Map<String,String>> responseEntity = new ResponseEntity();
 
         Map<String,String> maps=new HashMap<>();
 
-        if (token==null){
+        if (val==null){
             responseEntity.setSuccess(false);
+
             maps.put("message","账号或者密码错误");
 
         }else {
             responseEntity.setSuccess(true);
-            maps.put("token",token);
+            maps.put("token",val[0]);
+            maps.put("ServerNode",val[1]);
             maps.put("message","登录成功");
         }
 

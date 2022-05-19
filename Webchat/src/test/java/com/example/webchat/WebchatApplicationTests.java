@@ -3,15 +3,13 @@ package com.example.webchat;
 import com.example.webchat.Entity.CliMessageEntity;
 import com.example.webchat.Entity.UserEntity;
 import com.example.webchat.Untity.JsonUntity;
-import com.example.webchat.Untity.JwtUntity;
+import com.example.webchat.Untity.RedisUntity;
 import com.example.webchat.server.LoginServer;
-import com.example.webchat.server.Websocket.HandleMessageImpl;
+import com.example.webchat.server.Websocket.impl.HandleMessageImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import reactor.core.publisher.Mono;
 
-import javax.websocket.Session;
 import java.io.IOException;
 
 @SpringBootTest
@@ -24,6 +22,8 @@ class WebchatApplicationTests {
 
     @Autowired
     JsonUntity untity;
+    @Autowired
+    RedisUntity redisUntity;
     @Test
     void contextLoads() {
         System.out.println(server.Login("username","password"));
@@ -47,5 +47,10 @@ class WebchatApplicationTests {
         CliMessageEntity a= untity.Squence(data,CliMessageEntity.class);
 
 
+    }
+
+    @Test
+    void RedisTest(){
+        redisUntity.add("get","adqwe");
     }
 }

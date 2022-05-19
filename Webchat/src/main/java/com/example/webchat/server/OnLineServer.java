@@ -1,5 +1,7 @@
 package com.example.webchat.server;
 
+import com.example.webchat.Untity.RedisUntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -12,6 +14,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class OnLineServer {
+    private final String currNode="";
+    @Autowired
+    RedisUntity untity;
 
     private static Map<String, WebSocketSession> OnLineMap=new ConcurrentHashMap<>();
 
@@ -20,8 +25,8 @@ public class OnLineServer {
         OnLineMap.put(user,session);
     }
 
-    public WebSocketSession GetUser(String user,WebSocketSession session){
-        return session;
+    public WebSocketSession GetUser(String user){
+        return OnLineMap.get(user);
     }
 
     /**

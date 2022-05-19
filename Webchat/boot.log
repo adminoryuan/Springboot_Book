@@ -1,0 +1,6 @@
+2022-05-19 09:20:03.482  INFO 20488 --- [main] c.e.webchat.WebchatApplicationTests      : Starting WebchatApplicationTests using Java 16.0.2 on iMac with PID 20488 (started by imac in /Users/imac/ImChat/Boot/Webchat)
+2022-05-19 09:20:03.483  INFO 20488 --- [main] c.e.webchat.WebchatApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 09:20:08.736  INFO 20488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-19 09:20:08.842  INFO 20488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-19 09:20:08.924  INFO 20488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+2022-05-19 09:20:14.327  INFO 20488 --- [main] c.e.webchat.WebchatApplicationTests      : Started WebchatApplicationTests in 13.381 seconds (JVM running for 21.572)

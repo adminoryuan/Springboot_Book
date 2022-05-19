@@ -6,6 +6,7 @@ import com.example.webchat.Entity.UserEntity;
 import com.example.webchat.Mapper.UserMapper;
 import com.example.webchat.Untity.IdentityCheck;
 import com.example.webchat.Untity.JwtUntity;
+import com.example.webchat.Untity.RedisUntity;
 import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import org.apache.catalina.mapper.WrapperMappingInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,14 @@ public class LoginServer {
     @Autowired
     JwtUntity untity;
 
-    public String Login(String admin,String password){
+    @Autowired
+    RedisUntity redisUntity;
+
+    @Autowired
+    OnLineServerNode serverNode;
+
+
+    public String[] Login(String admin,String password){
         System.out.printf(admin);
         System.out.printf(password);
 
@@ -37,7 +45,13 @@ public class LoginServer {
 
         if (userEntity!=null){
 
-            return untity.EncoderJwt(admin);
+            //获得一个节点
+            String currNode= serverNode.GetNode();;
+
+            //保存用户与服务器之间的对应关系
+            redisUntity.addHashCache("OnLineUser",admin,currNode);
+
+            return new String[]{untity.EncoderJwt(admin),currNode};
         }
         return null;
     }
