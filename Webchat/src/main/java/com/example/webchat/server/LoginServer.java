@@ -48,6 +48,7 @@ public class LoginServer {
             //获得一个节点
             String currNode= serverNode.GetNode();;
 
+
             //保存用户与服务器之间的对应关系
             redisUntity.addHashCache("OnLineUser",admin,currNode);
 

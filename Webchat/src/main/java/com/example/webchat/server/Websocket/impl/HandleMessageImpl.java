@@ -55,14 +55,14 @@ public class HandleMessageImpl implements IHandleMessage {
                      return;
                  }
 
-
+                Map<String,String> meg=squence.getPlayLoad();
                 switch (squence.getMegType()){
                     case 1:OnLineServer.AddUser(currUser,session);
                         break;
                     case 2:
                         System.out.println("查看全部在线人数");
                         //查询在线人数
-                        ResultMessageEntity<Set<String>> resultMessage=new ResultMessageEntity<>();
+                        ResultMessageEntity<Set<Object>> resultMessage=new ResultMessageEntity<>();
                         resultMessage.setIsOk(true);
                         resultMessage.setMegType(2);
                         resultMessage.setBody(OnLineServer.getAllUser());
@@ -72,9 +72,10 @@ public class HandleMessageImpl implements IHandleMessage {
                         /**
                          * 发送消息
                          */
-                        Map<String,String> meg=squence.getPlayLoad();
+
 
                         if (meg.getOrDefault("isMass","").equals("1")){
+                            //群发信息
                             String bodys=meg.getOrDefault("meg","");
                             Map<String,String> maps=new HashMap<>();
 
@@ -86,6 +87,11 @@ public class HandleMessageImpl implements IHandleMessage {
                             res.setBody(maps);
                             res.setMegType(3);
                             OnLineServer.Mass(untity.Serialize(res));
+                        }else{
+                            //私发信息给好友
+                            String bodys=meg.getOrDefault("meg","");
+                            OnLineServer.sendTextUser(currUser,bodys);
+
                         }
                         break;
                 }

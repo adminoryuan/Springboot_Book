@@ -5,13 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -78,6 +74,8 @@ public class RedisUntity {
             redisTemplate.opsForHash().put(DEFAULT_KEY_PREFIX + key, subKey, value);
         }
 
+
+
         /**
          * 写入 hash-set,并设置过期时间
          *
@@ -100,6 +98,23 @@ public class RedisUntity {
             return  redisTemplate.opsForHash().get(DEFAULT_KEY_PREFIX + key, subKey);
         }
 
+        /**
+         * 获取hash长度
+         * @param hkey
+         * @return
+         */
+         public int getHashLen(String hkey){
+            return redisTemplate.opsForHash().keys(hkey).size();
+        }
+
+        /**
+         * 获取hash所有键
+         * @param hkey
+         * @return
+         */
+        public Set<Object> getHashKeySet(String hkey){
+             return redisTemplate.opsForHash().keys(hkey);
+        }
 
         /**
          * 从redis中获取缓存数据，转成对象
